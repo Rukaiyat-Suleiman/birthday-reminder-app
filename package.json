@@ -9,8 +9,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "dev": "nodemon .",
-    "start": "node .",
-    "postinstall": "npm rebuild sqlite3 --build-from-source"
+    "start": "node ."
   },
   "dependencies": {
     "cors": "^2.8.6",
@@ -22,8 +21,9 @@
     "morgan": "^1.10.1",
     "node-cron": "^4.2.1",
     "nodemailer": "^8.0.6",
-    "sequelize": "^6.37.8",
-    "sqlite3": "^6.0.1"
+    "pg": "^8.20.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
   },
   "devDependencies": {
     "jest": "^29.7.0",

@@ -1,10 +1,20 @@
 import { Sequelize, DataTypes, Op } from 'sequelize';
 import { logger } from './utils/logger.config.js';
 
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: process.env.DB_PATH || './database.sqlite',
-    logging: msg => logger.info(msg) // Log Sequelize queries using our logger
+if (!process.env.DATABASE_URL) {
+    logger.error("CRITICAL: DATABASE_URL is missing. Please set your PostgreSQL connection string in the .env file.");
+    process.exit(1);
+}
+
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+    logging: msg => logger.info(msg),
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false // Required for many managed Postgres services like Neon or Render
+        }
+    }
 });
 
 export const User = sequelize.define('User', {
