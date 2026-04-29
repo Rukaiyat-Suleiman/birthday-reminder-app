@@ -7,12 +7,19 @@ let transporter = null;
 const getTransporter = () => {
     if (transporter) return transporter;
 
-    logger.info("Initializing Gmail SMTP transport...");
+    logger.info("Initializing Gmail SMTP transport (Forcing IPv4)...");
     transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: {
             user: process.env.SMTP_USER,
-            pass: process.env.GOOGLE_APP_PASS // Using Google App Password
+            pass: process.env.GOOGLE_APP_PASS
+        },
+        family: 4, // Completely disables IPv6 routing attempts
+        // Force IPv4 to prevent ENETUNREACH errors on networks with broken IPv6 routing
+        tls: {
+            rejectUnauthorized: false
         }
     });
 
