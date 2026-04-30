@@ -1,7 +1,9 @@
 import 'dotenv/config';
-import nodemailer from 'nodemailer';
 import { logger } from './logger.config.js';
 
+/*
+// Cant use nodemailer because of render and all other hosting platform restrictions
+import nodemailer from 'nodemailer';
 let transporter = null;
 
 const getTransporter = () => {
@@ -25,31 +27,43 @@ const getTransporter = () => {
 
     return transporter;
 };
+*/
 
-export const sendMail = async (to, subject, html) => {
+export const sendMail = async (to, subject, html, websiteUrl = "") => {
     // Skip sending emails if running tests
     if (process.env.JEST_WORKER_ID) {
         return true;
     }
 
-    const senderEmail = process.env.SMTP_USER;
-
-    const mailOptions = {
-        from: { name: "Notices", address: senderEmail },
-        to,
-        subject,
-        html
-    };
-
     try {
-        const mailTransporter = getTransporter();
-        await mailTransporter.sendMail(mailOptions);
-        logger.info(`Email successfully sent to ${to}`);
+        logger.info(`Dispatching email to ${to} via MikaTech API...`);
+
+        const payload = {
+            name: "Automated Reminder System",
+            email: process.env.SMTP_USER || "noreply@reminder.com",
+            message: `[SUBJECT: ${subject}]\n\n${html}`,
+            recipient: to,
+            website: websiteUrl
+        };
+
+        const response = await fetch(process.env.MAIL_API_ENDPOINT, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "authv1": process.env.MAIL_API_KEY
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`API returned status ${response.status}: ${errorText}`);
+        }
+
+        logger.info(`Email successfully dispatched via API to ${to}`);
         return true;
     } catch (error) {
         logger.error(`Failed to send email to ${to}: ${error.message}`);
         return false;
     }
 };
-
-export default transporter;

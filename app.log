@@ -1,0 +1,383 @@
+[2026-04-27T07:48:39.089] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T07:48:39.095] [INFO] default - Listening on http://localhost:3000
+[2026-04-27T07:48:39.095] [INFO] default - Connected to the SQLite database.
+[2026-04-27T07:48:39.105] [INFO] default - Users table ready.
+[2026-04-27T07:55:22.986] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T07:55:22.997] [INFO] default - Listening on http://localhost:3000
+[2026-04-27T07:55:22.999] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T07:55:23.006] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-27T07:55:23.008] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T07:55:23.010] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_users_1`)
+[2026-04-27T07:55:23.011] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T08:07:41.342] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T08:07:41.374] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:07:41.427] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T08:07:41.499] [INFO] default - Executing (default): PRAGMA foreign_keys = OFF
+[2026-04-27T08:07:41.505] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-27T08:07:41.509] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:07:41.518] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T08:07:41.527] [INFO] default - Executing (default): PRAGMA foreign_keys = ON
+[2026-04-27T08:07:41.530] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T08:07:41.534] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:07:41.538] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-27T08:07:41.545] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T08:07:41.549] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T08:07:41.600] [INFO] default - GET / 200 2389 - 15.105 ms
+[2026-04-27T08:07:41.654] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-27T08:07:41.664] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-27T08:07:41.667] [INFO] default - POST /api/users 201 157 - 20.263 ms
+[2026-04-27T08:07:41.681] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-27T08:07:41.686] [WARN] default - Failed to create user, email already exists: john.doe@example.com
+[2026-04-27T08:07:41.689] [INFO] default - POST /api/users 409 67 - 9.894 ms
+[2026-04-27T08:07:41.701] [ERROR] default - Validation error: "email" is required
+[2026-04-27T08:07:41.706] [INFO] default - POST /api/users 400 68 - 6.592 ms
+[2026-04-27T08:07:41.724] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-27T08:07:41.729] [INFO] default - POST /api/users 400 78 - 4.771 ms
+[2026-04-27T08:07:41.740] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-27T08:07:41.743] [INFO] default - POST /api/users 400 86 - 3.967 ms
+[2026-04-27T08:08:54.651] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:08:54.713] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T08:08:54.799] [INFO] default - Executing (default): PRAGMA foreign_keys = OFF
+[2026-04-27T08:08:54.827] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-27T08:08:54.855] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:08:54.872] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T08:08:54.880] [INFO] default - Executing (default): PRAGMA foreign_keys = ON
+[2026-04-27T08:08:54.889] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T08:08:54.892] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:08:54.906] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-27T08:08:54.922] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T08:08:54.925] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T08:08:54.967] [INFO] default - GET / 200 2446 - 10.364 ms
+[2026-04-27T08:08:55.017] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-27T08:08:55.029] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-27T08:08:55.031] [INFO] default - POST /api/users 201 157 - 21.964 ms
+[2026-04-27T08:08:55.047] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-27T08:08:55.051] [WARN] default - Failed to create user, email already exists: john.doe@example.com
+[2026-04-27T08:08:55.054] [INFO] default - POST /api/users 409 67 - 8.178 ms
+[2026-04-27T08:08:55.064] [ERROR] default - Validation error: "email" is required
+[2026-04-27T08:08:55.072] [INFO] default - POST /api/users 400 68 - 8.441 ms
+[2026-04-27T08:08:55.089] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-27T08:08:55.093] [INFO] default - POST /api/users 400 78 - 3.865 ms
+[2026-04-27T08:08:55.102] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-27T08:08:55.107] [INFO] default - POST /api/users 400 86 - 6.033 ms
+[2026-04-27T08:09:53.790] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:09:53.866] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T08:09:53.967] [INFO] default - Executing (default): PRAGMA foreign_keys = OFF
+[2026-04-27T08:09:53.974] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-27T08:09:53.979] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:09:53.988] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T08:09:53.999] [INFO] default - Executing (default): PRAGMA foreign_keys = ON
+[2026-04-27T08:09:54.005] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T08:09:54.008] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-27T08:09:54.015] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-27T08:09:54.024] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T08:09:54.028] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T08:09:54.073] [INFO] default - GET / 200 2446 - 12.064 ms
+[2026-04-27T08:09:54.127] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-27T08:09:54.139] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-27T08:09:54.144] [INFO] default - POST /api/users 201 157 - 25.577 ms
+[2026-04-27T08:09:54.159] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-27T08:09:54.165] [WARN] default - Failed to create user, email already exists: john.doe@example.com
+[2026-04-27T08:09:54.168] [INFO] default - POST /api/users 409 67 - 10.390 ms
+[2026-04-27T08:09:54.182] [ERROR] default - Validation error: "email" is required
+[2026-04-27T08:09:54.190] [INFO] default - POST /api/users 400 68 - 10.411 ms
+[2026-04-27T08:09:54.201] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-27T08:09:54.206] [INFO] default - POST /api/users 400 78 - 4.346 ms
+[2026-04-27T08:09:54.218] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-27T08:09:54.223] [INFO] default - POST /api/users 400 86 - 5.689 ms
+[2026-04-27T09:36:43.340] [INFO] default - Using Mailtrap API for email dispatch.
+[2026-04-27T09:36:43.440] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T09:36:43.448] [INFO] default - Listening on http://localhost:2000
+[2026-04-27T09:36:43.454] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T09:36:43.461] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T09:36:43.463] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T09:36:43.465] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T09:37:11.177] [INFO] default - GET / 200 1668 - 26.136 ms
+[2026-04-27T09:37:11.281] [INFO] default - GET /public/style.css 404 155 - 7.556 ms
+[2026-04-27T09:37:11.285] [INFO] default - GET /public/script.js 404 155 - 1.109 ms
+[2026-04-27T09:37:12.032] [INFO] default - GET /favicon.ico 404 150 - 0.962 ms
+[2026-04-27T09:42:52.486] [INFO] default - GET / 200 1663 - 3.325 ms
+[2026-04-27T09:43:10.307] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-27T09:43:10.318] [INFO] default - User successfully created: nexake1640@ryzid.com
+[2026-04-27T09:43:10.338] [INFO] default - POST /api/users 201 158 - 41.121 ms
+[2026-04-27T09:43:11.331] [ERROR] default - Failed to send email to nexake1640@ryzid.com: Error: Unauthorized
+[2026-04-27T15:16:54.806] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T15:16:54.820] [INFO] default - Listening on http://localhost:2000
+[2026-04-27T15:16:54.823] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T15:16:54.832] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T15:16:54.836] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T15:16:54.838] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T15:17:03.501] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T15:17:03.513] [INFO] default - Listening on http://localhost:2000
+[2026-04-27T15:17:03.518] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T15:17:03.525] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T15:17:03.526] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T15:17:03.527] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T15:17:18.131] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T15:17:18.142] [INFO] default - Listening on http://localhost:2000
+[2026-04-27T15:17:18.145] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T15:17:18.150] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T15:17:18.151] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T15:17:18.152] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T19:16:36.520] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T19:16:36.535] [INFO] default - Listening on http://localhost:2000
+[2026-04-27T19:16:36.541] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T19:16:36.553] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T19:16:36.556] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T19:16:36.559] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T19:16:47.078] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T19:16:47.089] [INFO] default - Listening on http://localhost:4000
+[2026-04-27T19:16:47.094] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T19:16:47.101] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T19:16:47.102] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T19:16:47.106] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-27T22:17:52.038] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-27T22:17:52.146] [INFO] default - Listening on http://localhost:4000
+[2026-04-27T22:17:52.173] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-27T22:17:52.211] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-27T22:17:52.220] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-27T22:17:52.227] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:10:07.866] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T09:10:07.877] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T09:10:07.884] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:10:07.896] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:10:07.897] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:10:07.899] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:10:32.316] [INFO] default - GET / 200 1663 - 26.147 ms
+[2026-04-28T09:10:33.277] [INFO] default - GET /favicon.ico 404 150 - 3.362 ms
+[2026-04-28T09:31:28.260] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-28T09:31:28.268] [WARN] default - Failed to create user, email already exists: nexake1640@ryzid.com
+[2026-04-28T09:31:28.271] [INFO] default - POST /api/users 409 67 - 22.313 ms
+[2026-04-28T09:35:32.621] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-28T09:35:32.630] [INFO] default - User successfully created: xemod97896@poisonword.com
+[2026-04-28T09:35:32.630] [INFO] default - Initializing Mailtrap API transport...
+[2026-04-28T09:35:32.640] [INFO] default - POST /api/users 201 163 - 19.607 ms
+[2026-04-28T09:35:33.759] [ERROR] default - Failed to send email to xemod97896@poisonword.com: Error: Unauthorized
+[2026-04-28T09:47:19.316] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-28T09:47:19.384] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:47:19.461] [INFO] default - Executing (default): PRAGMA foreign_keys = OFF
+[2026-04-28T09:47:19.468] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-28T09:47:19.472] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-28T09:47:19.481] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:47:19.488] [INFO] default - Executing (default): PRAGMA foreign_keys = ON
+[2026-04-28T09:47:19.493] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:47:19.496] [INFO] default - Executing (default): DROP TABLE IF EXISTS `Users`;
+[2026-04-28T09:47:19.501] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `dob` VARCHAR(255) NOT NULL);
+[2026-04-28T09:47:19.510] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:47:19.512] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:47:19.556] [INFO] default - GET / 200 1663 - 11.002 ms
+[2026-04-28T09:47:19.602] [INFO] default - Executing (default): SELECT `id`, `username`, `email`, `dob` FROM `Users` AS `User` WHERE `User`.`email` = 'john.doe@example.com';
+[2026-04-28T09:47:19.613] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-28T09:47:19.623] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-28T09:47:19.626] [INFO] default - POST /api/users 201 157 - 32.648 ms
+[2026-04-28T09:47:19.638] [INFO] default - Executing (default): SELECT `id`, `username`, `email`, `dob` FROM `Users` AS `User` WHERE `User`.`email` = 'john.doe@example.com';
+[2026-04-28T09:47:19.643] [WARN] default - Registration blocked: email already exists (john.doe@example.com)
+[2026-04-28T09:47:19.646] [INFO] default - POST /api/users 409 67 - 8.226 ms
+[2026-04-28T09:47:19.655] [ERROR] default - Validation error: "email" is required
+[2026-04-28T09:47:19.662] [INFO] default - POST /api/users 400 68 - 8.428 ms
+[2026-04-28T09:47:19.671] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-28T09:47:19.675] [INFO] default - POST /api/users 400 78 - 3.902 ms
+[2026-04-28T09:47:19.684] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-28T09:47:19.688] [INFO] default - POST /api/users 400 86 - 3.949 ms
+[2026-04-28T09:48:17.149] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T09:48:17.159] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T09:48:17.164] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:48:17.170] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:48:17.171] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:48:17.172] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:48:47.714] [INFO] default - GET /favicon.ico 404 150 - 7.957 ms
+[2026-04-28T09:49:37.089] [INFO] default - Executing (default): SELECT `id`, `username`, `email`, `dob` FROM `Users` AS `User` WHERE `User`.`email` = 'lobibo7612@pertok.com';
+[2026-04-28T09:49:37.093] [INFO] default - Initializing Mailtrap API transport...
+[2026-04-28T09:49:38.239] [ERROR] default - Failed to send email to lobibo7612@pertok.com: Error: Unauthorized
+[2026-04-28T09:49:38.240] [WARN] default - Failed to send email to lobibo7612@pertok.com. User not added to database.
+[2026-04-28T09:49:38.242] [INFO] default - POST /api/users 500 114 - 1163.594 ms
+[2026-04-28T09:51:36.094] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T09:51:36.105] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T09:51:36.109] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:51:36.116] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:51:36.118] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:51:36.120] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:51:56.211] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T09:51:56.223] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T09:51:56.231] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:51:56.237] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:51:56.238] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:51:56.240] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:52:00.781] [INFO] default - Executing (default): SELECT `id`, `username`, `email`, `dob` FROM `Users` AS `User` WHERE `User`.`email` = 'lobibo7612@pertok.com';
+[2026-04-28T09:52:00.784] [INFO] default - Initializing Gmail SMTP transport...
+[2026-04-28T09:52:01.429] [ERROR] default - Failed to send email to lobibo7612@pertok.com: Missing credentials for "PLAIN"
+[2026-04-28T09:52:01.430] [WARN] default - Failed to send email to lobibo7612@pertok.com. User not added to database.
+[2026-04-28T09:52:01.434] [INFO] default - POST /api/users 500 114 - 663.269 ms
+[2026-04-28T09:52:42.434] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T09:52:42.445] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T09:52:42.447] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:52:42.452] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:52:42.453] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:52:42.457] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:53:39.196] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T09:53:39.207] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T09:53:39.210] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:53:39.216] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:53:39.218] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:53:39.220] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:54:35.094] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T09:54:35.107] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T09:54:35.111] [INFO] default - Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2026-04-28T09:54:35.117] [INFO] default - Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2026-04-28T09:54:35.122] [INFO] default - Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2026-04-28T09:54:35.124] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-28T09:54:38.983] [INFO] default - Executing (default): SELECT `id`, `username`, `email`, `dob` FROM `Users` AS `User` WHERE `User`.`email` = 'lobibo7612@pertok.com';
+[2026-04-28T09:54:38.987] [INFO] default - Initializing Gmail SMTP transport...
+[2026-04-28T09:54:44.786] [INFO] default - Email successfully sent to lobibo7612@pertok.com
+[2026-04-28T09:54:44.791] [INFO] default - Executing (default): INSERT INTO `Users` (`id`,`username`,`email`,`dob`) VALUES (NULL,$1,$2,$3);
+[2026-04-28T09:54:44.800] [INFO] default - User successfully created: lobibo7612@pertok.com
+[2026-04-28T09:54:44.813] [INFO] default - POST /api/users 201 158 - 5833.929 ms
+[2026-04-28T15:46:10.738] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-28T15:46:10.761] [INFO] default - Listening on http://localhost:4000
+[2026-04-28T15:46:14.759] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-28T15:46:15.014] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS "Users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL UNIQUE, "dob" VARCHAR(255) NOT NULL, PRIMARY KEY ("id"));
+[2026-04-28T15:46:15.299] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-28T15:46:15.554] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T00:01:14.475] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-30T00:01:14.495] [INFO] default - Listening on http://localhost:4000
+[2026-04-30T00:01:22.678] [INFO] default - GET / 200 1663 - 17.308 ms
+[2026-04-30T00:01:23.413] [INFO] default - GET /favicon.ico 404 150 - 2.246 ms
+[2026-04-30T00:01:54.919] [INFO] default - Executing (default): SELECT "id", "username", "email", "dob" FROM "Users" AS "User" WHERE "User"."email" = 'figipas827@poisonword.com';
+[2026-04-30T00:01:55.234] [INFO] default - Initializing Gmail SMTP transport (Forcing IPv4)...
+[2026-04-30T00:02:02.695] [INFO] default - Email successfully sent to figipas827@poisonword.com
+[2026-04-30T00:02:02.701] [INFO] default - Executing (default): INSERT INTO "Users" ("id","username","email","dob") VALUES (DEFAULT,$1,$2,$3) RETURNING "id","username","email","dob";
+[2026-04-30T00:02:03.539] [INFO] default - User successfully created: figipas827@poisonword.com
+[2026-04-30T00:02:03.541] [INFO] default - POST /api/users 201 160 - 14091.529 ms
+[2026-04-30T00:03:26.764] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T00:03:28.266] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T00:03:28.511] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T00:56:02.463] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-30T00:56:02.484] [INFO] default - Listening on http://localhost:4000
+[2026-04-30T02:07:54.680] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-30T02:07:54.703] [INFO] default - Listening on http://localhost:4000
+[2026-04-30T02:08:36.361] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T02:08:37.542] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T02:08:37.790] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:04:07.534] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T04:04:07.606] [INFO] default - Executing (default): DROP TABLE IF EXISTS "Users" CASCADE;
+[2026-04-30T04:04:07.790] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T04:04:07.874] [INFO] default - Executing (default): SELECT DISTINCT tc.constraint_name as constraint_name, tc.constraint_schema as constraint_schema, tc.constraint_catalog as constraint_catalog, tc.table_name as table_name,tc.table_schema as table_schema,tc.table_catalog as table_catalog,tc.initially_deferred as initially_deferred,tc.is_deferrable as is_deferrable,kcu.column_name as column_name,ccu.table_schema  AS referenced_table_schema,ccu.table_catalog  AS referenced_table_catalog,ccu.table_name  AS referenced_table_name,ccu.column_name AS referenced_column_name FROM information_schema.table_constraints AS tc JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name WHERE constraint_type = 'FOREIGN KEY' AND tc.table_name = 'Users' AND tc.table_catalog = 'birthday_reminderdb'
+[2026-04-30T04:04:08.031] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:04:08.251] [INFO] default - Executing (default): DROP TABLE IF EXISTS "Users" CASCADE;
+[2026-04-30T04:04:08.490] [INFO] default - Executing (default): DROP TABLE IF EXISTS "Users" CASCADE;
+[2026-04-30T04:04:14.571] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T04:04:14.638] [INFO] default - Executing (default): DROP TABLE IF EXISTS "Users" CASCADE;
+[2026-04-30T04:04:14.818] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS "Users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL UNIQUE, "dob" VARCHAR(255) NOT NULL, PRIMARY KEY ("id"));
+[2026-04-30T04:04:14.878] [INFO] default - Executing (default): SELECT DISTINCT tc.constraint_name as constraint_name, tc.constraint_schema as constraint_schema, tc.constraint_catalog as constraint_catalog, tc.table_name as table_name,tc.table_schema as table_schema,tc.table_catalog as table_catalog,tc.initially_deferred as initially_deferred,tc.is_deferrable as is_deferrable,kcu.column_name as column_name,ccu.table_schema  AS referenced_table_schema,ccu.table_catalog  AS referenced_table_catalog,ccu.table_name  AS referenced_table_name,ccu.column_name AS referenced_column_name FROM information_schema.table_constraints AS tc JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name WHERE constraint_type = 'FOREIGN KEY' AND tc.table_name = 'Users' AND tc.table_catalog = 'birthday_reminderdb'
+[2026-04-30T04:04:15.072] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T04:04:15.371] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:04:15.383] [INFO] default - Executing (default): DROP TABLE IF EXISTS "Users" CASCADE;
+[2026-04-30T04:04:15.627] [INFO] default - Executing (default): DROP TABLE IF EXISTS "Users" CASCADE;
+[2026-04-30T04:05:34.067] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:05:34.194] [INFO] default - GET / 200 1663 - 22.147 ms
+[2026-04-30T04:05:34.314] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-30T04:05:34.323] [INFO] default - POST /api/users 201 157 - 36.526 ms
+[2026-04-30T04:05:34.358] [WARN] default - Registration blocked: email already exists (john.doe@example.com)
+[2026-04-30T04:05:34.369] [INFO] default - POST /api/users 409 67 - 18.638 ms
+[2026-04-30T04:05:34.403] [ERROR] default - Validation error: "email" is required
+[2026-04-30T04:05:34.420] [INFO] default - POST /api/users 400 68 - 22.824 ms
+[2026-04-30T04:05:34.447] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-30T04:05:34.458] [INFO] default - POST /api/users 400 78 - 11.222 ms
+[2026-04-30T04:05:34.484] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-30T04:05:34.493] [INFO] default - POST /api/users 400 86 - 11.966 ms
+[2026-04-30T04:07:33.821] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:07:33.888] [INFO] default - GET / 200 1663 - 10.269 ms
+[2026-04-30T04:07:33.945] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-30T04:07:33.949] [INFO] default - POST /api/users 201 157 - 22.462 ms
+[2026-04-30T04:07:33.966] [WARN] default - Registration blocked: email already exists (john.doe@example.com)
+[2026-04-30T04:07:33.969] [INFO] default - POST /api/users 409 67 - 5.615 ms
+[2026-04-30T04:07:33.979] [ERROR] default - Validation error: "email" is required
+[2026-04-30T04:07:33.986] [INFO] default - POST /api/users 400 68 - 6.989 ms
+[2026-04-30T04:07:33.995] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-30T04:07:33.999] [INFO] default - POST /api/users 400 78 - 3.789 ms
+[2026-04-30T04:07:34.016] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-30T04:07:34.021] [INFO] default - POST /api/users 400 86 - 6.042 ms
+[2026-04-30T04:31:36.421] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:31:36.492] [INFO] default - GET / 200 1663 - 14.110 ms
+[2026-04-30T04:31:36.566] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-30T04:31:36.571] [INFO] default - POST /api/users 201 157 - 24.835 ms
+[2026-04-30T04:31:36.588] [WARN] default - Registration blocked: email already exists (john.doe@example.com)
+[2026-04-30T04:31:36.592] [INFO] default - POST /api/users 409 67 - 6.130 ms
+[2026-04-30T04:31:36.605] [ERROR] default - Validation error: "email" is required
+[2026-04-30T04:31:36.613] [INFO] default - POST /api/users 400 68 - 8.524 ms
+[2026-04-30T04:31:36.634] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-30T04:31:36.638] [INFO] default - POST /api/users 400 78 - 4.758 ms
+[2026-04-30T04:31:36.654] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-30T04:31:36.658] [INFO] default - POST /api/users 400 86 - 5.403 ms
+[2026-04-30T04:31:49.317] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-30T04:31:49.338] [INFO] default - Listening on http://localhost:4000
+[2026-04-30T04:31:54.306] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T04:31:54.551] [INFO] default - Executing (default): CREATE TABLE IF NOT EXISTS "Users" ("id"   SERIAL , "username" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL UNIQUE, "dob" VARCHAR(255) NOT NULL, PRIMARY KEY ("id"));
+[2026-04-30T04:31:54.823] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T04:31:55.066] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:32:09.876] [INFO] default - GET /api 404 142 - 5.317 ms
+[2026-04-30T04:32:13.773] [INFO] default - GET / 200 1663 - 11.824 ms
+[2026-04-30T04:33:06.242] [INFO] default - Executing (default): SELECT "id", "username", "email", "dob" FROM "Users" AS "User" WHERE "User"."email" = 'kefic82203@ryzid.com';
+[2026-04-30T04:33:06.503] [INFO] default - Dispatching email to kefic82203@ryzid.com via MikaTech API...
+[2026-04-30T04:33:09.487] [INFO] default - GET /.well-known/appspecific/com.chrome.devtools.json 404 187 - 0.564 ms
+[2026-04-30T04:33:32.904] [ERROR] default - Failed to send email to kefic82203@ryzid.com: API returned status 500: {"success":false,"statusCode":500,"message":"An internal server error occurred, view logs for more details","errors":{"message":"ValidationError: \"message\" length must be less than or equal to 700 characters long"}}
+[2026-04-30T04:33:32.905] [WARN] default - Failed to send email to kefic82203@ryzid.com. User not added to database.
+[2026-04-30T04:33:32.907] [INFO] default - POST /api/users 500 114 - 28505.363 ms
+[2026-04-30T04:39:41.755] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:39:41.829] [INFO] default - GET / 200 1663 - 9.467 ms
+[2026-04-30T04:39:41.903] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-30T04:39:41.907] [INFO] default - POST /api/users 201 157 - 27.211 ms
+[2026-04-30T04:39:41.932] [WARN] default - Registration blocked: email already exists (john.doe@example.com)
+[2026-04-30T04:39:41.934] [INFO] default - POST /api/users 409 67 - 8.171 ms
+[2026-04-30T04:39:41.948] [ERROR] default - Validation error: "email" is required
+[2026-04-30T04:39:41.955] [INFO] default - POST /api/users 400 68 - 8.798 ms
+[2026-04-30T04:39:41.975] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-30T04:39:41.980] [INFO] default - POST /api/users 400 78 - 5.517 ms
+[2026-04-30T04:39:41.990] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-30T04:39:41.995] [INFO] default - POST /api/users 400 86 - 5.164 ms
+[2026-04-30T04:43:12.144] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-30T04:43:12.165] [INFO] default - Listening on http://localhost:4000
+[2026-04-30T04:43:18.747] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T04:43:18.993] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T04:43:19.265] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:49:18.577] [INFO] default - Executing (default): SELECT "id", "username", "email", "dob" FROM "Users" AS "User" WHERE "User"."email" = 'kefic82203@ryzid.com';
+[2026-04-30T04:49:18.845] [INFO] default - Dispatching email to kefic82203@ryzid.com via MikaTech API...
+[2026-04-30T04:49:19.351] [ERROR] default - Failed to send email to kefic82203@ryzid.com: API returned status 500: {"success":false,"statusCode":500,"message":"An internal server error occurred, view logs for more details","errors":{"message":"ValidationError: \"website\" is required"}}
+[2026-04-30T04:49:19.355] [WARN] default - Failed to send email to kefic82203@ryzid.com. User not added to database.
+[2026-04-30T04:49:19.363] [INFO] default - POST /api/users 500 114 - 2620.629 ms
+[2026-04-30T04:50:57.147] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:50:57.449] [INFO] default - GET / 200 1663 - 23.645 ms
+[2026-04-30T04:50:57.621] [INFO] default - User successfully created: john.doe@example.com
+[2026-04-30T04:50:57.634] [INFO] default - POST /api/users 201 157 - 117.768 ms
+[2026-04-30T04:50:57.681] [WARN] default - Registration blocked: email already exists (john.doe@example.com)
+[2026-04-30T04:50:57.697] [INFO] default - POST /api/users 409 67 - 30.407 ms
+[2026-04-30T04:50:57.723] [ERROR] default - Validation error: "email" is required
+[2026-04-30T04:50:57.737] [INFO] default - POST /api/users 400 68 - 18.537 ms
+[2026-04-30T04:50:57.759] [ERROR] default - Validation error: "email" must be a valid email
+[2026-04-30T04:50:57.775] [INFO] default - POST /api/users 400 78 - 17.698 ms
+[2026-04-30T04:50:57.811] [ERROR] default - Validation error: "dob" must be in ISO 8601 date format
+[2026-04-30T04:50:57.815] [INFO] default - POST /api/users 400 86 - 4.574 ms
+[2026-04-30T04:50:59.855] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-30T04:50:59.875] [INFO] default - Listening on http://localhost:4000
+[2026-04-30T04:51:00.057] [INFO] default - GET / 304 - - 10.737 ms
+[2026-04-30T04:51:00.147] [INFO] default - GET /.well-known/appspecific/com.chrome.devtools.json 404 187 - 3.967 ms
+[2026-04-30T04:51:04.358] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T04:51:04.605] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T04:51:04.871] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:51:14.632] [INFO] default - Executing (default): SELECT "id", "username", "email", "dob" FROM "Users" AS "User" WHERE "User"."email" = 'kefic82203@ryzid.com';
+[2026-04-30T04:51:14.906] [INFO] default - Dispatching email to kefic82203@ryzid.com via MikaTech API...
+[2026-04-30T04:51:17.861] [INFO] default - Email successfully dispatched via API to kefic82203@ryzid.com
+[2026-04-30T04:51:17.867] [INFO] default - Executing (default): INSERT INTO "Users" ("id","username","email","dob") VALUES (DEFAULT,$1,$2,$3) RETURNING "id","username","email","dob";
+[2026-04-30T04:51:18.112] [INFO] default - User successfully created: kefic82203@ryzid.com
+[2026-04-30T04:51:18.114] [INFO] default - POST /api/users 201 157 - 3498.896 ms
+[2026-04-30T04:54:55.068] [INFO] default - Birthday cron job scheduled for 7:00 AM daily.
+[2026-04-30T04:54:55.102] [INFO] default - Listening on http://localhost:4000
+[2026-04-30T04:55:00.129] [INFO] default - Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Users'
+[2026-04-30T04:55:00.400] [INFO] default - Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Users' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+[2026-04-30T04:55:00.663] [INFO] default - Database & tables synced via Sequelize!
+[2026-04-30T04:55:18.316] [INFO] default - Executing (default): SELECT "id", "username", "email", "dob" FROM "Users" AS "User" WHERE "User"."email" = 'badoxip353@ryzid.com';
+[2026-04-30T04:55:18.564] [INFO] default - Dispatching email to badoxip353@ryzid.com via MikaTech API...
+[2026-04-30T04:55:20.276] [INFO] default - Email successfully dispatched via API to badoxip353@ryzid.com
+[2026-04-30T04:55:20.282] [INFO] default - Executing (default): INSERT INTO "Users" ("id","username","email","dob") VALUES (DEFAULT,$1,$2,$3) RETURNING "id","username","email","dob";
+[2026-04-30T04:55:20.575] [INFO] default - User successfully created: badoxip353@ryzid.com
+[2026-04-30T04:55:20.580] [INFO] default - POST /api/users 201 160 - 3906.798 ms
